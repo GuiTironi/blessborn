@@ -1,0 +1,56 @@
+/* ======== SEÇÃO INICIAL COM FUNDO PARALLAX ======== */
+#inicio {
+  position: relative;
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+
+  /* Fundo fixo */
+  background-image: url('../fotos/inicio.jpg'); /* 🖼️ altere o caminho conforme sua pasta */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Parallax */
+  background-attachment: fixed;
+  transform: translateZ(0);
+  will-change: background-position;
+
+  /* Tamanho e alinhamento */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Camada escura para leitura */
+#inicio::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+}
+
+/* Garante que o texto fique acima da camada escura */
+#inicio * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ======== ANIMAÇÃO SUAVE DO PARALLAX ======== */
+/* @keyframes parallaxMove {
+  from {
+    background-position: center 0;
+  }
+  to {
+    background-position: center 100px;
+  }
+}
+
+#inicio {
+  animation: parallaxMove 20s linear infinite alternate;
+} */
