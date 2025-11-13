@@ -1,7 +1,8 @@
+
 /* ======== SEÇÃO INICIAL COM FUNDO PARALLAX ======== */
 #inicio {
   position: relative;
-  color: white;
+  color: rgb(255, 255, 255);
   text-shadow: 0 0 10px rgba(0,0,0,0.6);
 
   /* Fundo fixo */
