@@ -1,12 +1,11 @@
-
 /* ======== SEÇÃO INICIAL COM FUNDO PARALLAX ======== */
 #inicio {
   position: relative;
   color: rgb(255, 255, 255);
-  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 
   /* Fundo fixo */
-  background-image: url('../fotos/inicio.jpg'); /* 🖼️ altere o caminho conforme sua pasta */
+  background-image: url("../fotos/inicio.jpg"); /* 🖼️ altere o caminho conforme sua pasta */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -55,3 +54,97 @@
 #inicio {
   animation: parallaxMove 20s linear infinite alternate;
 } */
+/* CTA */
+.cta {
+  padding: 16.25rem 0; /* Area de visualização */
+  position: relative;
+  clip-path: inset(0);
+
+  /*   padding: 6.25rem 0;
+ position: relative;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+
+  /* Fundo fixo 
+  background-image: url('../fotos/ChatGPT\ Image\ 5\ de\ nov.\ de\ 2025\,\ 19_57_13.png'); /* 🖼️ altere o caminho conforme sua pasta 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+ Parallax 
+  background-attachment: fixed;
+  transform: translateZ(0);
+  will-change: background-position;
+
+ Tamanho e alinhamento
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; */
+}
+
+.cta img {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  object-fit: cover;
+}
+
+.cta .container {
+  position: relative;
+  z-index: 3;
+}
+
+.cta::before {
+  content: "";
+  background: #000d1a;
+  position: absolute;
+  inset: 0;
+  z-index: 0; /* 🔥 manda o fundo pra trás */
+  opacity: 0.65; /* opcional: deixa o fundo mais elegante */
+}
+
+
+/* Torna todo o fundo do site cinza escuro */
+body {
+  background-color: #353535; /* Cinza quase preto */
+  color: #e0e0e0; /* Texto branco para contraste */
+}
+
+/* Também garante que containers e sections não fiquem com fundo branco */
+section,
+header,
+footer,
+
+
+
+
+.container {
+  background-color: transparent !important;
+}
+
+.card {
+    padding: 20px 20px; /* aumenta o espaço interno do card */
+    transition: transform 0.3s ease, box-light 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.06);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.25);
+}
+
+
+.card-custom {
+    background-color: #1d1e1f ;
+     /* Substitua pelo código da cor desejada */
+    /* Adicionar outras propriedades se necessário */
+}
+
+.contact-btn{
+  transition: all .3s ease-in-out;
+}
