@@ -109,7 +109,6 @@
   opacity: 0.65; /* opcional: deixa o fundo mais elegante */
 }
 
-
 /* Torna todo o fundo do site cinza escuro */
 body {
   background-color: #353535; /* Cinza quase preto */
@@ -120,9 +119,6 @@ body {
 section,
 header,
 footer,
-
-
-
 
 .container {
   background-color: transparent !important;
@@ -138,7 +134,6 @@ footer,
     box-shadow: 0 10px 25px rgba(255, 255, 255, 0.25);
 }
 
-
 .card-custom {
     background-color: #1d1e1f ;
      /* Substitua pelo código da cor desejada */
@@ -147,4 +142,69 @@ footer,
 
 .contact-btn{
   transition: all .3s ease-in-out;
+}
+
+.section-hero {
+  padding: 0;
+}
+
+.hero .carousel{
+  min-height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.hero img{
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  z-index: 1;
+  position: absolute;
+}
+
+.carousel .item{
+  background-size: cover;
+  overflow: hidden;
+  inset: 0;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-position: center;
+}
+
+.hero .carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.459);
+  z-index: 2;
+}
+
+.hero .carousel-container {
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 3;
+}
+
+.hero h2{
+  font-weight: 700;
+  color: white;
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(0, 89, 255, 0.6);
+}
+
+.hero p{
+  color: white;
+  font-size: 20px;
+  max-width: 600px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
 }
