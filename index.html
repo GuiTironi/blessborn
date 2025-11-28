@@ -313,28 +313,29 @@
         </div>
 
         <!-- Estrutura da Galeria -->
-        <div class="">
+        <div class="container-fluid">
 
             <!-- ISOTOPE // Mansory -->
 
             <!-- Filtro -->
-            <div class="isotope-layout" data-defaut-filter="*" data-layout="masonry">
+            <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
 
                 <!-- Botoes do Filtro -->
                 <ul class="portfolio-filters isotope-filters">
                     <!-- Todos ou o Reset / Limpar a Selecao -->
                     <li data-filter="*" class="filter-active">Todos</li>
-                    <li data-filter="">Polimentos </li>
-                    <li data-filter="">Lavagens</li>
-                    <li data-filter="">Cristalizaçâo </li>
-                    <li data-filter="">Enceramento </li>
+                    <li data-filter=".filter-polimentos">Polimentos</li>
+                    <li data-filter=".filter-lavagens">Lavagens</li>
+                    <li data-filter=".filter-cristalizacao">Cristalizaçâo</li>
+                    <li data-filter=".filter-encerameno">Enceramento</li>
                 </ul>
 
                 <!-- Galeria na Horizontal -->
-                <div class="row g-0 isotope-container" id="fotos">
+                <div class="row g-0 isotope-container mansory-grid" id="fotos">
 
                     <!-- Fotos 1 Colunas Bootstrap -->
-                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item">
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-polimentos">
 
                         <div class="portfolio-content">
                             <img src="fotos/Foto-m2.jpg" alt="" class="img-fluid">
@@ -350,7 +351,7 @@
                     </div>
 
                     <!-- Foto 2 -->
-                    <div class="col-xl-3 col-lg-4 col-md-6 ">
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-polimentos">
                         <div class="portfolio-content">
                             <img src="fotos/Foto-m2.jpg" alt="" class="img-fluid">
 
@@ -365,7 +366,7 @@
                     </div>
 
                     <!-- Foto 3 -->
-                    <div class="col-xl-3 col-lg-4 col-md-6 ">
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-polimentos">
                         <div class="portfolio-content">
                             <img src="fotos/Foto-m2.jpg" alt="" class="img-fluid">
 
@@ -380,7 +381,7 @@
                     </div>
 
                     <!-- Foto 4 -->
-                    <div class="col-xl-3 col-lg-4 col-md-6 ">
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-lavagens">
                         <div class="portfolio-content">
                             <img src="fotos/Foto-m2.jpg" alt="" class="img-fluid">
 
@@ -394,7 +395,7 @@
                         </div>
                     </div>
                     <!-- Foto 5 -->
-                    <div class="col-xl-3 col-lg-4 col-md-6 ">
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-lavagens">
                         <div class="portfolio-content">
                             <img src="fotos/Foto-m2.jpg" alt="" class="img-fluid">
 
@@ -408,7 +409,7 @@
                         </div>
                     </div>
                     <!-- Foto 6 -->
-                    <div class="col-xl-3 col-lg-4 col-md-6 ">
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-lavagens">
                         <div class="portfolio-content">
                             <img src="fotos/Foto-m2.jpg" alt="" class="img-fluid">
 
@@ -422,7 +423,7 @@
                         </div>
                     </div>
                     <!-- Foto 7 -->
-                    <div class="col-xl-3 col-lg-4 col-md-6 ">
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-itemfilter-lavagens">
                         <div class="portfolio-content">
                             <img src="fotos/Foto-m2.jpg" alt="" class="img-fluid">
 
@@ -436,7 +437,7 @@
                         </div>
                     </div>
                     <!-- Foto 8 -->
-                    <div class="col-xl-3 col-lg-4 col-md-6 ">
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-lavagens">
                         <div class="portfolio-content">
                             <img src="fotos/Foto-m2.jpg" alt="" class="img-fluid">
 
@@ -450,7 +451,7 @@
                         </div>
                     </div>
                     <!-- Foto 9 -->
-                    <div class="col-xl-3 col-lg-4 col-md-6 ">
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item Cristalizaçâo">
                         <div class="portfolio-content">
                             <img src="fotos/Foto-m2.jpg" alt="" class="img-fluid">
 
@@ -464,7 +465,7 @@
                         </div>
                     </div>
                     <!-- Foto 10 -->
-                    <div class="col-xl-3 col-lg-4 col-md-6 ">
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item Cristalizaçâo">
                         <div class="portfolio-content">
                             <img src="fotos/Foto-m2.jpg" alt="" class="img-fluid">
 
@@ -478,7 +479,7 @@
                         </div>
                     </div>
                     <!-- Foto 11-->
-                    <div class="col-xl-3 col-lg-4 col-md-6 ">
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item Cristalizaçâo">
                         <div class="portfolio-content">
                             <img src="fotos/Foto-m2.jpg" alt="" class="img-fluid">
 
@@ -492,7 +493,7 @@
                         </div>
                     </div>
                     <!-- Foto 12-->
-                    <div class="col-xl-3 col-lg-4 col-md-6 ">
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-encerameno">
                         <div class="portfolio-content">
                             <img src="fotos/Foto-m2.jpg" alt="" class="img-fluid">
 
@@ -506,7 +507,7 @@
                         </div>
                     </div>
                     <!-- Foto 13-->
-                    <div class="col-xl-3 col-lg-4 col-md-6 ">
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-encerameno">
                         <div class="portfolio-content">
                             <img src="fotos/Foto-m2.jpg" alt="" class="img-fluid">
 
@@ -520,7 +521,7 @@
                         </div>
                     </div>
                     <!-- Foto 14-->
-                    <div class="col-xl-3 col-lg-4 col-md-6 ">
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-encerameno">
                         <div class="portfolio-content">
                             <img src="fotos/Foto-m2.jpg" alt="" class="img-fluid">
 
@@ -534,7 +535,7 @@
                         </div>
                     </div>
                     <!-- Foto 15-->
-                    <div class="col-xl-3 col-lg-4 col-md-6 ">
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-encerameno">
                         <div class="portfolio-content">
                             <img src="fotos/Foto-m2.jpg" alt="" class="img-fluid">
 
@@ -548,7 +549,7 @@
                         </div>
                     </div>
                     <!-- Foto 16-->
-                    <div class="col-xl-3 col-lg-4 col-md-6 ">
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-encerameno">
                         <div class="portfolio-content">
                             <img src="fotos/Foto-m2.jpg" alt="" class="img-fluid">
 
@@ -695,38 +696,65 @@
     <!-- Contador Stats -->
     <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
 
+    <!-- Mansory -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+    <!-- Imagesloaded -->
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+
+    <!-- Java Script -->
     <script>
+        //iniciar purecaunter
         new PureCounter();
+        //iniciar aos
         AOS.init(
             {
                 duration: 1200,
                 once: true
             }
         );
+        //galeria- g lightbox
         const lightbox = GLightbox();
 
-        document.addEventListener("DOMContentLoaded", function () {
-            const maisFotos = document.getElementById("mais-fotos");
-            const botao = document.getElementById("btnMostrar");
-
-            // Começa escondido
-            maisFotos.style.display = "none";
-
-            botao.addEventListener("click", function () {
-                if (maisFotos.style.display === "none") {
-
-                    // MOSTRAR
-                    maisFotos.style.display = "grid";
-                    botao.textContent = "Mostrar menos";
-
-                } else {
-
-                    // ESCONDER
-                    maisFotos.style.display = "none";
-                    botao.textContent = "Mostrar mais";
-                }
+        //mansory grid
+        document.addEventListener('DOMContentLoaded',
+            function () {
+                //constante = fixo
+                const grid = document.querySelector('.mansory-grid');
+                imagesLoaded(grid, function(){
+                    new Mansory(grid, {
+                        itemSelector: 'portifolio-item',
+                        percentPosition: true,
+                        horizontalOrder: true,
+                        gutter: 0
+                    });
+                })
             });
-        });
+
+
+
+        /*         document.addEventListener("DOMContentLoaded", function () {
+                    const maisFotos = document.getElementById("mais-fotos");
+                    const botao = document.getElementById("btnMostrar");
+        
+                    // Começa escondido
+                    maisFotos.style.display = "none";
+        
+                    botao.addEventListener("click", function () {
+                        if (maisFotos.style.display === "none") {
+        
+                            // MOSTRAR
+                            maisFotos.style.display = "grid";
+                            botao.textContent = "Mostrar menos";
+        
+                        } else {
+        
+                            // ESCONDER
+                            maisFotos.style.display = "none";
+                            botao.textContent = "Mostrar mais";
+                        }
+                    });
+                }); */
     </script>
 
 </body>
