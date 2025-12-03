@@ -274,3 +274,33 @@ footer,
     font-size: 1rem;
   }
 }
+
+.portfolio-content {
+    position: relative;
+    overflow: hidden; /* Evita que a sobreposição saia da área da imagem */
+}
+
+.portfolio-info {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.6); /* fundo semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-content:hover .portfolio-info {
+    opacity: 1; /* Torna visível ao passar o mouse */
+}
+
+.portfolio-info a {
+    color: white;
+    font-size: 2rem; /* Ajuste conforme necessário */
+}
