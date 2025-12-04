@@ -1,60 +1,213 @@
-/* ======== SEÇÃO INICIAL COM FUNDO PARALLAX ======== 
-#inicio {
-  position: relative;
-  color: rgb(255, 255, 255);
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+/* ======== GERAL ======== */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-   Fundo fixo 
-  background-image: url("../fotos/inicio.jpg");  🖼️ altere o caminho conforme sua pasta 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+}
+
+/* ======== NAVBAR ======== */
+.navbar {
+  background-color: #0080ff;
+  backdrop-filter: blur(1px);
+}
+.navbar .nav-link,
+.navbar-brand {
+  color: white !important;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.navbar .nav-link:hover,
+.navbar-brand:hover {
+  color: #000000 !important;
+}
+
+/* ======== INÍCIO (HERO) ======== */
+#inicio {
+  background-image: url("../fotos/porshe-azul-bebe.jpeg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-
-  Parallax 
   background-attachment: fixed;
-  transform: translateZ(0);
-  will-change: background-position;
+  /* ...resto do estilo... */
 
-  /* Tamanho e alinhamento 
+  background-attachment: fixed;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: #fff;
 }
-
-/* Camada escura para leitura 
 #inicio::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   background: rgba(0, 0, 0, 0.55);
-  z-index: 0;
 }
-
-/* Garante que o texto fique acima da camada escura 
 #inicio * {
   position: relative;
   z-index: 1;
 }
+#inicio .btn-primary {
+  background: linear-gradient(90deg, #0080ff, #00bfff);
+  box-shadow: 0px 0px 25px rgba(5, 115, 189, 0.63);
+  border: none;
+  padding: 14px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+#inicio .btn-primary:hover {
+  background-color: transparent;
+  opacity: 0.75;
+  transform: scale(1.04);
+}
 
-/* ======== ANIMAÇÃO SUAVE DO PARALLAX ======== */
-/* @keyframes parallaxMove {
-  from {
-    background-position: center 0;
+/* ======== SOBRE ======== */
+.sobre {
+  background: #2b2b2b;
+}
+.sobre h1 {
+  color: #0080ff;
+  font-weight: 800;
+}
+.sobre h2 {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+.sobre img {
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.4);
+}
+
+/* ======== SERVIÇOS ======== */
+.servicos {
+  background: #2b2b2b;
+}
+.servicos h1 {
+  color:#0080ff;
+  font-weight: 800;
+}
+.servicos .card {
+  background-color: #0066ff;
+  border: none;
+  box-shadow: 0px 5px 17px  rgba(1, 60, 94, 0.25);
+  transition: 0.4s;
+  color: #e0e0e0;
+}
+.servicos .card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.479);
+}
+
+/* ======== GALERIA ======== */
+.fotos h1 {
+
+  color: #0080ff;
+  font-weight: 800;
+}
+.fotos {
+  background:  #2b2b2b;
+  padding: 40px 0;
+}
+.fotos img {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+.fotos img:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 5px 20px rgba(0,0,0,0.4);
+}
+
+/* ======== CONTATO ======== */
+.contact {
+  background:#312f2f;
+  color: #e0e0e0;
+}
+.contact .btn-primary {
+  background-color: #0080ff;
+  border: none;
+  transition: 0.3s;
+  font-weight: bold;
+}
+.contact .btn-primary:hover {
+  background-color: #00bfff;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 768px) {
+  #inicio {
+    background-attachment: scroll;
   }
-  to {
-    background-position: center 100px;
+  .navbar-brand {
+    font-size: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .servicos .card {
+    margin-bottom: 4px;
   }
 }
 
-#inicio {
-  animation: parallaxMove 20s linear infinite alternate;
-} */
-/* CTA */
+/* ===== BOTÕES DE CONTATO (WHATS & INSTA) ===== */
+
+/* ===== BOTÕES DE CONTATO (WHATS & INSTA) ===== */
+.btn-whatsapp,
+.btn-instagram {
+    padding: 12px 30px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 12px;
+    border: none;
+    transition: 0.3s ease-in-out;
+    color: #fff;
+}
+
+.social-buttons a {
+    margin: 0 20px; /* espaço entre os botões */
+}
+
+/* Fundo WhatsApp */
+.btn-whatsapp {
+    background: #25d366;
+}
+
+/* Fundo Instagram (gradiente) */
+.btn-instagram {
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+
+/* Hover – ambos */
+.btn-whatsapp:hover,
+.btn-instagram:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px rgba(22, 21, 21, 0.4);
+    filter: brightness(1.1);
+}
+
+/* Hover específico para o Instagram – deixa o fundo transparente */
+.btn-whatsapp:hover, .btn-instagram:hover {
+    background: transparent;
+    color: #fff; /* mantém o texto branco */
+    border: 2px solid #fff; /* opcional: deixa uma borda visível */
+}
+
 .cta {
   padding: 16.25rem 0; /* Area de visualização */
   position: relative;
@@ -109,198 +262,7 @@
   opacity: 0.65; /* opcional: deixa o fundo mais elegante */
 }
 
-/* Torna todo o fundo do site cinza escuro */
-body {
-  background-color: #353535; /* Cinza quase preto */
-  color: #e0e0e0; /* Texto branco para contraste */
-}
-
-/* Também garante que containers e sections não fiquem com fundo branco */
-section,
-header,
-footer,
-.container {
-  background-color: transparent !important;
-}
-
-.card {
-  padding: 20px 20px; /* aumenta o espaço interno do card */
-  transition: transform 0.3s ease, box-light 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.06);
-  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.25);
-}
-
-.card-custom {
-  background-color: #1d1e1f;
-  /* Substitua pelo código da cor desejada */
-  /* Adicionar outras propriedades se necessário */
-}
-
-.contact-btn {
-  transition: all 0.3s ease-in-out;
-}
-
-.section-hero {
-  padding: 0;
-}
-
-.hero .carousel {
-  min-height: 100vh;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  position: relative;
-}
-
-.hero img {
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  object-fit: cover;
-  z-index: 1;
-}
-
-.hero .carousel-item::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.459);
-  z-index: 2;
-}
-
-.carousel-item {
-  background-size: cover;
-  overflow: hidden;
-  inset: 0;
-  background-repeat: no-repeat;
-  position: absolute;
-  background-position: center;
-}
-
-.hero .carousel-container {
-  flex-direction: column;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  z-index: 3;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  padding: 20px;
-}
-
-.hero h2 {
-  font-weight: 700;
-  color: white;
-  font-size: 48px;
-  margin-bottom: 20px;
-  text-shadow: 0 0 10px rgb(3, 44, 97);
-}
-
-.hero p {
-  color: white;
-  font-size: 20px;
-  max-width: 600px;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
-}
-
-.hero .carousel-control-prev,
-.hero .carousel-control-next {
-  background: none;
-  width: 50px;
-  font-size: 2rem;
-  line-height: 1;
-  transition: 0, 3s;
-  opacity: 0;
-  color: rgb(0, 68, 255);
-}
-
-.hero .carousel-control-prev:hover,
-.hero .carousel-control-next:hover {
-  line-height: 0;
-  opacity: 1;
-  transition: 0, 3s;
-}
-
-/* .fotos img {
-  border-radius: 10px;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  transition: 0.4s;
-}
-.fotos img:hover {
-  transform: scale(1.03);
-  box-shadow: 0px 5px 20px rgba(0,0,0,0.4);
-} */
-
-.portfolio-filters {
-  list-style: none;
-  text-align: center;
-  margin: 10 px auto 20px auto;
-}
-
-.portfolio-filters li {
-  cursor: pointer;
-  display: inline-block;
-  background: linear-gradient(140deg, rgb(44, 44, 44), rgb(48, 47, 47) 200%);
-  font-size: 1.5rem;
-  border-radius: 1rem;
-  text-align: center;
-  padding: 0.26rem;
-}
-
-.portfolio-filters li:hover,
-.portfolio-filters li.filter-active {
-  background: rgba(0, 0, 0, 0.459);
-  color: rgba(255, 255, 255, 0.938);
-  transition: 0.8s;
-}
-
-/* Site em telas ate  575px */
-@media(max-width: 575px){
-  .portfolio-filters li{
-    font-size: 1rem;
-  }
-}
-
-.portfolio-content {
-    position: relative;
-    overflow: hidden; /* Evita que a sobreposição saia da área da imagem */
-}
-
-.portfolio-info {
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 3;
-    background: rgba(0, 0, 0, 0.6); /* fundo semitransparente */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    transition: opacity 0.3s ease;
-}
-
-.portfolio-content:hover .portfolio-info {
-    opacity: 1; /* Torna visível ao passar o mouse */
-}
-
-.portfolio-info a {
-    color: white;
-    font-size: 2rem; /* Ajuste conforme necessário */
+.observacao {
+  background-color: #2b2b2b;
+  color: #f1f1f1;
 }
