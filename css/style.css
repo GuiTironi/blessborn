@@ -1,3 +1,4 @@
+@@ -1,276 +1,306 @@
 /* ======== SEÇÃO INICIAL COM FUNDO PARALLAX ======== 
 #inicio {
   position: relative;
@@ -273,6 +274,7 @@ footer,
   .portfolio-filters li{
     font-size: 1rem;
   }
+}
 }
 
 .portfolio-content {
