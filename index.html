@@ -671,7 +671,8 @@
 
             <div class="container text-center mt-5">
                 <div class="col-lg-12">
-                    <form id="formContato" action="https://formspree.io/f/xyzrpjgk" method="POST" class="row gy-4">
+                    <form id="formContato" action="https://formspree.io/f/xyzrpjgk" method="post" class="row gy-4"
+                        class="form-contato">
 
 
                         <!-- Nome -->
@@ -739,6 +740,14 @@
 
 
 
+
+    </section>
+
+    <section class="rodape">
+
+        <div class="cotainer text-center col-lg-12 mt-3">
+            <p>@BLESSBORN - Estética Automotiva</p>
+        </div>
 
     </section>
 
@@ -837,6 +846,43 @@
         });
 
         // Web3Forms redirecionará depois do envio bem-sucedido
+
+        // Validação e envio do formulário com limpeza
+        const form = document.querySelector(".form-contato");
+
+        if (form) {
+            form.addEventListener("submit", async function (event) {
+                event.preventDefault(); // Impede a atualização da página
+
+                const telefoneValor = telefoneInput?.value.replace(/\D/g, "");
+                if (!telefoneValor || telefoneValor.length !== 11) {
+                    alert("Por favor, insira um telefone válido com 11 dígitos.");
+                    telefoneInput?.focus();
+                    return;
+                }
+
+                const formData = new FormData(form);
+                const action = form.getAttribute("action");
+
+                try {
+                    const response = await fetch(action, {
+                        method: "POST",
+                        body: formData,
+                        headers: { "Accept": "application/json" }
+                    });
+
+                    if (response.ok) {
+                        alert("Mensagem enviada com sucesso!");
+                        form.reset();
+                    } else {
+                        alert("Erro ao enviar a mensagem. Tente novamente.");
+                    }
+
+                } catch (error) {
+                    alert("Erro de conexão. Verifique sua internet.");
+                }
+            });
+        }
     </script>
 
 
